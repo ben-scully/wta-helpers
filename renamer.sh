@@ -1,7 +1,18 @@
 #!/bin/bash
 # set -x
 
+####################################
+# List of files I need to download
+# - account transactions
+# - aged receivables
+# - balance sheet
+# - p&l
+
 # Note: $1 should look like "2021-01"
+if [[ ! $1 =~ 202[0-4]-[0-1][0-9] ]]; then
+  echo "Error: You didn't pass a valid date as \$1"
+  exit 64
+fi
 
 # CREATE new dir for copied files
 new_dir="/Users/scully/Desktop/$1_-_Monthly_Financial_Board_Reports"
@@ -44,7 +55,7 @@ for i in $(find $base_dir -name "$start*"); do
 	echo '$next'
 	echo $next
 
-	# PUT in a new folder
+	# PUT in the new folder
 	new_location=$(echo "$next" | sed "s~$base_dir~$new_dir~g")
 	echo
 	echo '$new_location'
