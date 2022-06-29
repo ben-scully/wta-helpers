@@ -1,15 +1,15 @@
 #!/bin/bash
 
-source envs/env-vars.sh
+source envs/env_vars.sh
 
 #############################################
 # POST create contacts
 
 exit 2
 
-ACCESS_TOKEN=$(jq -r .access_token secrets/oauth2-token.json)
-#NEW_CONTACTS=$(< secrets/contacts-to-create.json)
-NEW_CONTACTS=$(< secrets/contacts-to-create-juniors.json)
+ACCESS_TOKEN=$(jq -r .access_token secrets/oauth2_token.json)
+#NEW_CONTACTS=$(< secrets/contacts_to_create.json)
+NEW_CONTACTS=$(< secrets/contacts_to_create_juniors.json)
 
 echo "${NEW_CONTACTS}"
 
@@ -22,4 +22,4 @@ new_contacts_list=$(curl -v -POST \
   -d "${NEW_CONTACTS}")
 
 echo "$new_contacts_list"
-echo "$new_contacts_list" > secrets/contacts-list-juniors.json
+echo "$new_contacts_list" > secrets/contacts_list_juniors.json

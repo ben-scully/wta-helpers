@@ -35,7 +35,7 @@ end
 
 def xero_contact_list
   base_file_path = '/Users/scully/Projects/'
-  filename = "#{base_file_path}wta-helpers/secrets/contacts-list.json"
+  filename = "#{base_file_path}wta-helpers/secrets/contacts_list.json"
   xero_raw = File.read(filename)
   JSON.parse(xero_raw)
 end

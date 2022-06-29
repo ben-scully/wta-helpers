@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require './lib/ruby_helpers.rb'
+require './lib/ruby_helpers'
 
 grade = 'Juniors'
 base_file_path = '/Users/scully/Downloads/'
@@ -58,7 +58,7 @@ end
 puts invoices
 
 store_in_file(
-  "secrets/invoices-to-create-#{grade.snakecase}.json",
+  "secrets/invoices_to_create_#{grade.snakecase}.json",
   'Invoices',
   invoices
 )

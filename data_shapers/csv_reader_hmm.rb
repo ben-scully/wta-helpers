@@ -90,7 +90,7 @@ store_contacts_for_creation(contacts, contacts_suffix)
 
 #   puts json.to_json
 
-#   File.open("secrets/contacts-to-create-#{grade.downcase}.json", 'w') do |file|
+#   File.open("secrets/contacts_to_create_#{grade.downcase}.json", 'w') do |file|
 #     file.puts json.to_json
 #   end
 # end
@@ -102,7 +102,7 @@ store_contacts_for_creation(contacts, contacts_suffix)
 
 #   puts json.to_json
 
-#   File.open("secrets/invoices-to-create-#{grade.downcase}.json", 'w') do |file|
+#   File.open("secrets/invoices_to_create_#{grade.downcase}.json", 'w') do |file|
 #     file.puts json.to_json
 #   end
 # end

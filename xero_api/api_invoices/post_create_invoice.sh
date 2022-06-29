@@ -1,15 +1,15 @@
 #!/bin/bash
 
-source envs/env-vars.sh
+source envs/env_vars.sh
 
 #############################################
 # POST create invoices
 
 exit 2
 
-ACCESS_TOKEN=$(jq -r .access_token secrets/oauth2-token.json)
-#NEW_INVOICES=$(< secrets/invoices-to-create.json)
-NEW_INVOICES=$(< secrets/invoices-to-create-juniors.json)
+ACCESS_TOKEN=$(jq -r .access_token secrets/oauth2_token.json)
+#NEW_INVOICES=$(< secrets/invoices_to_create.json)
+NEW_INVOICES=$(< secrets/invoices_to_create_juniors.json)
 
 echo "${NEW_INVOICES}"
 

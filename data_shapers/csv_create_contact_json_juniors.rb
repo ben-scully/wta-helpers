@@ -31,7 +31,7 @@ contacts = payments_as_hash.map do |row|
 end
 
 store_in_file(
-  "secrets/contacts-to-create-#{grade.snakecase}.json",
+  "secrets/contacts_to_create_#{grade.snakecase}.json",
   'Contacts',
   contacts
 )

@@ -124,7 +124,7 @@ def store_contacts_for_creation(contacts, suffix)
 
   puts json.to_json
 
-  File.open("secrets/contacts-to-create-#{suffix}.json", 'w') do |file|
+  File.open("secrets/contacts_to_create_#{suffix}.json", 'w') do |file|
     file.puts json.to_json
   end
 end

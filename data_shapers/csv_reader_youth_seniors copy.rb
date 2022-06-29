@@ -47,7 +47,7 @@ unless contacts.empty?
 
   puts json.to_json
 
-  File.open("secrets/contacts-to-create-#{grade.downcase}.json", 'w') do |file|
+  File.open("secrets/contacts_to_create_#{grade.downcase}.json", 'w') do |file|
     file.puts json.to_json
   end
 end
@@ -59,7 +59,7 @@ unless invoices.empty?
 
   puts json.to_json
 
-  File.open("secrets/invoices-to-create-#{grade.downcase}.json", 'w') do |file|
+  File.open("secrets/invoices_to_create_#{grade.downcase}.json", 'w') do |file|
     file.puts json.to_json
   end
 end

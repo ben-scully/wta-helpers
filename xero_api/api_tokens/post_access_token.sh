@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source envs/env-vars.sh
+source envs/env_vars.sh
 source secrets/secrets.sh
 
 #############################################
